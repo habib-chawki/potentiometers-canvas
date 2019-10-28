@@ -12,7 +12,7 @@ let board = new firmata.Board("/dev/ttyACM0", () => {
 
 fs.readFile("./example07.html", (err, html) => {
   if (!err) {
-    const server = http
+    http
       .createServer((req, res) => {
         res.writeHeader(200, { "Content-Type": "text/html" });
         res.write(html);
