@@ -10,7 +10,7 @@ let board = new firmata.Board("/dev/ttyACM0", () => {
   board.pinMode(1, board.MODES.ANALOG);
 });
 
-fs.readFile("./example07.html", (err, html) => {
+fs.readFile("./index.html", (err, html) => {
   if (!err) {
     http
       .createServer((req, res) => {
